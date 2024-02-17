@@ -42,13 +42,14 @@ function addData() {
 }
 
 function removeFailedStudent() {
-  function failstudent(i) {
-    if(i.marks < 50)
+  let i=arr.entries();
+  for(i in arr)
+  {
+    if(arr[i].marks < 50)
     {
       arr.splice(i,1);
     }
   }
-  arr.forEach(failstudent);
   console.log(arr);
 }
 
